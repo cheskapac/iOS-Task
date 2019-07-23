@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -547,6 +547,7 @@
 					};
 					D5D054EA223E61160036CAA3 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
 						TestTargetID = D5D054D3223E61140036CAA3;
 					};
 				};
@@ -896,7 +897,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ba.app.iOS-Task";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iostask.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -916,7 +917,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ba.app.iOS-Task";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iostask.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -927,7 +928,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EFCF890C17AAC26D39F8BAFA /* Pods-iOS TaskTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZKT7WS283B;
@@ -939,7 +939,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ba.app.iOS-TaskTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS Task.app/iOS Task";
 			};
@@ -949,7 +949,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D81BFC60490B72237C20CC4F /* Pods-iOS TaskTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZKT7WS283B;
@@ -961,7 +960,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ba.app.iOS-TaskTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS Task.app/iOS Task";
 			};

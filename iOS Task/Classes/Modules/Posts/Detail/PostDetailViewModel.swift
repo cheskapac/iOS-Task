@@ -8,17 +8,18 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 import Kingfisher
 
 final class PostDetailViewModel {
     init(post: Post, dataService: IDataService, alertService: IAlertService) {
-        self.post = Variable<Post>(post)
+        self.post = BehaviorRelay<Post>(value: post)
         self.dataService = dataService
         self.alertService = alertService
         self.title = Observable.just(post.user.username)
     }
 
-    let post: Variable<Post>
+    let post: BehaviorRelay<Post>
     let dataService: IDataService
     let alertService: IAlertService
     let title: Observable<String>
@@ -54,7 +55,7 @@ final class PostDetailViewModel {
         return dataService.refreshPost(post: post.value).subscribe { [weak self] event in
             switch event {
             case .success(let post):
-                self?.post.value = post
+                self?.post.accept(post)
                 self?.postRefreshing.onNext(false)
             case .error(let error):
                 self?.showRetryAlert(error: error, retryCallback: retryCallback)
